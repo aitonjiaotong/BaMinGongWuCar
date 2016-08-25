@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:taxi="http://schemas.android.com/apk/res/com.aiton.yc.client"
+    android:id="@+id/ontexi_address_input"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg002" >
+
+<!--     <include -->
+<!--         android:id="@+id/map_title_bar" -->
+<!--         android:layout_alignParentLeft="true" -->
+<!--         android:layout_alignParentTop="true" -->
+<!--         layout="@layout/title_layout" /> -->
+
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#f3f2ee"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/cityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:drawableRight="@drawable/city_down_arrow"
+                android:text="定位中"
+                android:textColor="@color/black" />
+
+            <RelativeLayout
+                android:layout_gravity="center_vertical"
+                android:id="@+id/search_can"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp" >
+
+                <cn.com.easytaxi.platform.view.AddressEditView
+                    android:id="@+id/search_button_panel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F2F2F3"
+                    android:gravity="center_vertical"
+                    taxi:load_oninflated="false" >
+                </cn.com.easytaxi.platform.view.AddressEditView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:background="@null"
+                    android:paddingLeft="4dp"
+                    android:src="@drawable/ic_search" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_weight="4"
+            android:textSize="@dimen/normalTextSize"
+            android:id="@+id/textView_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="取消" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup_choice"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/search_layout"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio_history"
+            style="@style/search_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="历史" />
+
+        <RadioButton
+            android:id="@+id/radio_usual"
+            style="@style/search_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="常用" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/line_change"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/radioGroup_choice"
+        android:orientation="horizontal" >
+
+        <View
+            android:id="@+id/line_btn1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFB628" />
+
+        <View
+            android:id="@+id/line_btn2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#E7E5E0" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line_change"
+        android:background="@color/white"
+        android:cacheColorHint="#00000000"
+        android:dividerHeight="0dp"
+        android:fadeScrollbars="false"
+        android:fadingEdge="none" >
+    </ListView>
+
+</RelativeLayout>

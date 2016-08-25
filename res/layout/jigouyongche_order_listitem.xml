@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:descendantFocusability="blocksDescendants"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/dachezuche_gray_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="订单号:"
+            android:textColor="@color/dachezuche_gray"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/tv_order_list_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/dachezuche_gray"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/tv_order_list_stage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:text=""
+            android:textColor="@color/dachezuche_yellow"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_car_img"
+            android:layout_width="88dp"
+            android:layout_height="71.5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/car_img"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_car_name"
+                style="@style/dachezuche_title_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="起亚2K"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_carriage_count"
+                    style="@style/dachezuche_gray_small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="三厢"/>
+
+                <TextView
+                    android:id="@+id/tv_displacement"
+                    style="@style/dachezuche_gray_small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="1.4自动"/>
+
+                <TextView
+                    android:id="@+id/tv_car_seat_count"
+                    style="@style/dachezuche_gray_small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="乘坐5人"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView91"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:text="取车时间"
+                android:textSize="@dimen/normalTextSize"/>
+
+            <TextView
+                android:id="@+id/tv_get_car_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:gravity="center"
+                android:text="03-22"
+                android:textColor="@color/title_bar"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/tv_get_car_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|top"
+                android:text="周二 15:00"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8">
+
+            <TextView
+                android:id="@+id/tv_how_long"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/imageView32"
+                android:layout_centerHorizontal="true"
+                android:text="3个月"
+                android:textColor="@color/title_bar"
+                android:textSize="@dimen/normalTextSize"/>
+
+            <ImageView
+                android:id="@+id/imageView32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/time_under_line"/>
+
+
+            <passenger.view.customview.MarqueeTextView
+                android:id="@+id/tv_what_discount"
+                style="@style/dachezuche_yellow_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView32"
+                android:layout_marginTop="6dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text=""/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView94"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:text="还车时间"
+                android:textSize="@dimen/normalTextSize"/>
+
+            <TextView
+                android:id="@+id/tv_return_car_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:gravity="center"
+                android:text="05-22"
+                android:textColor="@color/title_bar"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/tv_return_car_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|top"
+                android:text="周五 15:00"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0.5dp"-->
+    <!--android:background="@color/line_gray"/>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_dache_jg_order_get_car"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--style="@style/dachezuche_gray_small_text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:text="取车门店"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="0.5dp"-->
+    <!--android:layout_height="18dp"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:background="@color/line_gray"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_dache_jg_store_name_get"-->
+    <!--style="@style/dachezuche_gray_small_text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="三明客运中心店"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0.5dp"-->
+    <!--android:background="@color/line_gray"/>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_dache_jg_order_return_car"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--style="@style/dachezuche_gray_small_text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:text="还车门店"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="0.5dp"-->
+    <!--android:layout_height="18dp"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:background="@color/line_gray"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_dache_jg_store_name_return"-->
+    <!--style="@style/dachezuche_gray_small_text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="三明客运中心店"/>-->
+
+    <!--</LinearLayout>-->
+</LinearLayout>

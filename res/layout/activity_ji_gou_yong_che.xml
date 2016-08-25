@@ -1,0 +1,792 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_dache_jg_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:src="@drawable/icon_back_dache"/>
+
+        <TextView
+            android:id="@+id/tv_zuche_title_text"
+            style="@style/dachezuche_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/module_rental_car"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/org_get_and_retrun_loc_choose_img"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_dache_jg_choose_time_get"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_selector_white_system_gray"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textColor="@color/light_black"
+                        android:id="@+id/textView91"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|bottom"
+                        android:text="@string/get_car_time"
+                        android:textSize="@dimen/normalTextSize"/>
+
+                    <TextView
+                        android:id="@+id/textView_startDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/title_bar"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:textColor="@color/light_black"
+                        android:id="@+id/textView_startTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|top"
+                        android:text=""/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_choose_day_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textView_dayCounts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/imageView32"
+                        android:layout_centerHorizontal="true"
+                        android:text=""
+                        android:textColor="@color/title_bar"
+                        android:textSize="@dimen/normalTextSize"/>
+
+                    <ImageView
+                        android:id="@+id/imageView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/time_under_line"/>
+
+                    <passenger.view.customview.MarqueeTextView
+                        android:id="@+id/tv_what_discount"
+                        style="@style/dachezuche_yellow_small_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageView32"
+                        android:layout_marginTop="6dp"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text=""/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_dache_jg_return_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_selector_white_system_gray"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textColor="@color/light_black"
+                        android:id="@+id/textView94"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|bottom"
+                        android:text="@string/return_car_time"
+                        android:textSize="@dimen/normalTextSize"/>
+
+                    <TextView
+                        android:id="@+id/textView_endDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/title_bar"
+                        android:textSize="18dp"/>
+
+                    <TextView
+                        android:textColor="@color/light_black"
+                        android:id="@+id/textView_endTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|top"
+                        android:text=""/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/line_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/rg_dache_jg_months"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/rb_dache_jg_five_day"
+                        style="@style/dachezuche_normal_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiobutton_selector_dache"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/five_days"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_dache_jg_ten_day"
+                        style="@style/dachezuche_normal_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiobutton_selector_dache"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/ten_days"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_dache_jg_fifteen_months"
+                        style="@style/dachezuche_normal_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/radiobutton_selector_dache"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/fifteen_days"/>
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/line_gray"/>
+
+            <LinearLayout
+                android:id="@+id/ll_dache_choos_driver"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/layout_selector_white_system_gray"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/dachezuche_normal_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/carry_driver"/>
+
+                <passenger.view.customview.UISwitchButton
+                    android:id="@+id/swb_has_driver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/line_gray"/>
+
+<!--             <LinearLayout -->
+<!--                 android:id="@+id/ll_is_naked_car_hire" -->
+<!--                 android:layout_width="match_parent" -->
+<!--                 android:layout_height="40dp" -->
+<!--                 android:background="@drawable/layout_selector_white_system_gray" -->
+<!--                 android:gravity="center_vertical" > -->
+
+<!--                 <TextView -->
+<!--                     style="@style/dachezuche_normal_text" -->
+<!--                     android:layout_width="wrap_content" -->
+<!--                     android:layout_height="wrap_content" -->
+<!--                     android:layout_marginLeft="10dp" -->
+<!--                     android:text="@string/is_naked_car_hire" /> -->
+
+<!--                 <passenger.view.customview.MarqueeTextView -->
+<!--                     android:id="@+id/tv_dache_jg_store_name_return" -->
+<!--                     style="@style/dachezuche_gray_small_text" -->
+<!--                     android:layout_width="wrap_content" -->
+<!--                     android:layout_height="wrap_content" -->
+<!--                     android:layout_marginLeft="6dp" -->
+<!--                     android:layout_marginRight="6dp" -->
+<!--                     android:layout_weight="1" -->
+<!--                     android:ellipsize="marquee" -->
+<!--                     android:focusable="true" -->
+<!--                     android:focusableInTouchMode="true" -->
+<!--                     android:marqueeRepeatLimit="marquee_forever" -->
+<!--                     android:scrollHorizontally="true" -->
+<!--                     android:singleLine="true" -->
+<!--                     android:text="@string/is_naked_car_hire_explan" /> -->
+
+<!--                 <passenger.view.customview.UISwitchButton -->
+<!--                     android:id="@+id/swb_is_naked_car_hire" -->
+<!--                     android:layout_width="wrap_content" -->
+<!--                     android:layout_height="wrap_content" -->
+<!--                     android:layout_marginRight="10dp" /> -->
+<!--             </LinearLayout> -->
+
+<!--             <TextView -->
+<!--                 android:layout_width="match_parent" -->
+<!--                 android:layout_height="0.5dp" -->
+<!--                 android:layout_marginLeft="10dp" -->
+<!--                 android:layout_marginRight="10dp" -->
+<!--                 android:background="@color/line_gray"/> -->
+
+<!--             <LinearLayout -->
+<!--                 android:layout_width="match_parent" -->
+<!--                 android:layout_height="40dp" -->
+<!--                 android:background="@drawable/layout_selector_white_system_gray" -->
+<!--                 android:gravity="center_vertical"> -->
+
+<!--                 <TextView -->
+<!--                     style="@style/dachezuche_normal_text" -->
+<!--                     android:layout_width="wrap_content" -->
+<!--                     android:layout_height="wrap_content" -->
+<!--                     android:layout_marginLeft="10dp" -->
+<!--                     android:layout_weight="1" -->
+<!--                     android:text="@string/hasTax"/> -->
+
+
+<!--                 <passenger.view.customview.UISwitchButton -->
+<!--                     android:id="@+id/swb_has_tax" -->
+<!--                     android:layout_width="wrap_content" -->
+<!--                     android:layout_height="wrap_content" -->
+<!--                     android:layout_marginRight="10dp"/> -->
+
+
+<!--             </LinearLayout> -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/line_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/layout_selector_white_system_gray"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/dachezuche_normal_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/has_lease4other"/>
+
+
+                <passenger.view.customview.UISwitchButton
+                    android:id="@+id/swb_has_lease4other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_lease4other_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/line_gray"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/ll_phone_of_other"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/layout_selector_white_system_gray"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/dachezuche_normal_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/phone_of_other"/>
+
+                <EditText
+                    android:id="@+id/et_phone_of_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text"
+                    android:hint="@string/phone_of_other_hine"
+                    android:inputType="phone"
+                    android:padding="4dp"
+                    android:textColorHint="@color/gray"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:id="@+id/tv_phone_other_editor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_select"
+                    android:padding="8dp"
+                    android:text="@string/editor"
+                    android:textColor="@color/white"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_phone_other_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_select"
+                    android:padding="8dp"
+                    android:text="@string/confirm"
+                    android:textColor="@color/white"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_user_choose_car_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/iv_car_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/car_img"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_car_name"
+                        style="@style/dachezuche_title_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text=""/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_carriage_count"
+                            style="@style/dachezuche_gray_small_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""/>
+
+                        <TextView
+                            android:id="@+id/tv_displacement"
+                            style="@style/dachezuche_gray_small_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text=""/>
+
+                        <TextView
+                            android:id="@+id/tv_car_seat_count"
+                            style="@style/dachezuche_gray_small_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/prise_img"/>
+
+                    <TextView
+                        android:id="@+id/tv_car_price"
+                        style="@style/dachezuche_yellow_small_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""/>
+
+                    <TextView
+                        style="@style/dachezuche_yellow_small_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/天"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_dache_jg_choose_type_gongwuche"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_selector_white_system_gray"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="16dp"
+                        android:src="@drawable/gongwuche_2x"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="12dp">
+
+                        <RadioButton
+                            android:id="@+id/rb_dache_gongwuche"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/radiobutton_choose_car_type"
+                            android:checked="false"
+                            android:clickable="false"/>
+
+                        <TextView
+                            android:textColor="@color/light_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/type_gwc"
+                            android:textSize="@dimen/normalTextSize"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_dache_jg_choose_type_shangwuche"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_selector_white_system_gray"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="16dp"
+                        android:src="@drawable/shangwuche_2x"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="12dp">
+
+                        <RadioButton
+                            android:id="@+id/rb_dache_shangwuche"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/radiobutton_choose_car_type"
+                            android:clickable="false"/>
+
+                        <TextView
+                            android:textColor="@color/light_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/type_swc"
+                            android:textSize="@dimen/normalTextSize"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_dache_jg_choose_type_zhifache"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_selector_white_system_gray"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="16dp"
+                        android:src="@drawable/zhifache_2x"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="12dp">
+
+                        <RadioButton
+                            android:id="@+id/rb_dache_zhifache"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/radiobutton_choose_car_type"
+                            android:clickable="false"/>
+
+                        <TextView
+                            android:textColor="@color/light_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/type_zfc"
+                            android:textSize="@dimen/normalTextSize"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_dache_jg_choose_type_yueyeche"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_selector_white_system_gray"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="16dp"
+                        android:src="@drawable/jeep_2x"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="12dp">
+
+                        <RadioButton
+                            android:id="@+id/rb_dache_yueyeche"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/radiobutton_choose_car_type"
+                            android:checked="false"
+                            android:clickable="false"/>
+
+                        <TextView
+                            android:textColor="@color/light_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/type_yyc"
+                            android:textSize="@dimen/normalTextSize"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_dache_jg_choose_type_pika"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_selector_white_system_gray"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="16dp"
+                        android:src="@drawable/pika_2x"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="12dp">
+
+                        <RadioButton
+                            android:id="@+id/rb_dache_pika"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/radiobutton_choose_car_type"
+                            android:clickable="false"/>
+
+                        <TextView
+                            android:textColor="@color/light_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/type_pkc"
+                            android:textSize="@dimen/normalTextSize"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_dache_jg_choose_type_keche"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_selector_white_system_gray"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="16dp"
+                        android:src="@drawable/keche_2x"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="12dp">
+
+                        <RadioButton
+                            android:id="@+id/rb_dache_keche"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/radiobutton_choose_car_type"
+                            android:clickable="false"/>
+
+                        <TextView
+                            android:textColor="@color/light_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/type_kc"
+                            android:textSize="@dimen/normalTextSize"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_dache_jg_next"
+                style="@style/dachezuche_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/next_step"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

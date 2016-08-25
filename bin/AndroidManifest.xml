@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aiton.yc.client"
+    android:versionCode="20160824"
+    android:versionName="1.0.1" >
+
+    <!-- 记得修改assets 下面的about_us.html版本 -->
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_FIND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 友盟分享权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- renren sso Permission for Unit Test -->
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+
+    <application
+        android:name="cn.com.easytaxi.ETApp"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/et_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+
+        <!-- android:debuggable="true" -->
+
+
+        <!-- 平台 -->
+        <activity
+            android:name="cn.com.easytaxi.platform.RegisterActivity"
+            android:label="@string/et_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.platform.AddUserInfoActivity"
+            android:label="@string/et_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.platform.MyWebViewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.platform.IndexActivity"
+            android:label="@string/et_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="cn.com.easytaxi.app" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.platform.MainActivityNew"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/et_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.platform.SettingActivity"
+            android:label="@string/et_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.platform.InfoActivity"
+            android:label="@string/et_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.platform.MainHelpActivity"
+            android:label="@string/et_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.book.NewBookDetail"
+            android:label="@string/et_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service
+            android:name="cn.com.easytaxi.platform.PhoneListService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name="cn.com.easytaxi.service.UploadActionLogFileService"
+            android:enabled="true" >
+        </service>
+
+        <activity
+            android:name="com.easytaxi.etpassengersx.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <!-- 电召 -->
+        <activity
+            android:name="cn.com.easytaxi.phone.MainActivity"
+            android:label="@string/et_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.phone.AddActivity"
+            android:label="@string/et_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.platform.AboutActivity"
+            android:label="@string/et_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.onetaxi.CityActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 即时打车 -->
+
+        <activity
+            android:name="cn.com.easytaxi.onetaxi.MainActivityNew2"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 预约打车 -->
+        <activity
+            android:name="cn.com.easytaxi.book.MainActivity"
+            android:label="@string/et_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.book.BookPublish"
+            android:label="@string/et_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.book.BookShow"
+            android:label="@string/et_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.book.BookListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/et_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!--  -->
+        <activity
+            android:name="cn.com.easytaxi.platform.AlarmBookActivity"
+            android:label="@string/et_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+        <!-- UMENG平台默认Activity -->
+        <activity
+            android:name="com.umeng.api.activity.OauthActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="unspecified"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.umeng.api.activity.UpdateStatusActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="unspecified"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.platform.CitySelectActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnspecified" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/city_searchable" />
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="cn.com.easytaxi.platform.CitySelectActivity" />
+        </activity>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>
+        <service
+            android:name="cn.com.easytaxi.platform.service.MainService"
+            android:enabled="true"
+            android:label="etaxicore" />
+
+        <activity
+            android:name="cn.com.easytaxi.platform.RemTaxiActiviy"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.platform.RemPassengerActiviy"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.onetaxi.SearchAddressActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.onetaxi.SearchAddressNewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" >
+        </activity>
+
+        <service
+            android:name="cn.com.easytaxi.platform.service.OneBookService"
+            android:enabled="true"
+            android:exported="false"
+            android:label="etaxionebook" >
+            <intent-filter>
+                <action android:name="cn.com.easytaxi.onetaxi.start.action" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="cn.com.easytaxi.OneBookReceiver" >
+            <intent-filter>
+                <action android:name="cn.com.easytaxi.onetaxi.maincmd.RESP.action" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="cn.com.easytaxi.receiver.BookAlarmReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="cn.com.easytaxi.platform.RemdActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.ui.MoreActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.platform.MainMsgManageActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+
+        <receiver android:name="cn.com.easytaxi.receiver.LocationBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="cn.com.easytaxi.magi.system.location" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="cn.com.easytaxi.ui.ContactList" >
+        </activity>
+
+        <service android:name="cn.com.easytaxi.service.UploadPhonseService" >
+        </service>
+
+        <activity
+            android:name="cn.com.easytaxi.ui.BookFragementActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.ui.MoreWebviewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.ui.SuggestionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.ui.SetIpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.ui.UserProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.ui.Message"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.ui.OrderHistory"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.ui.FeiYongMingXiActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.ui.JiFenActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.ui.JiFenSCActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.mymsg.MyMsgMainActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.mine.MyMainActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.message.MyMessage"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.message.MyMessageDialogActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.message.BaseDialogActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.message.MsgDetailActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.message.WebActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service
+            android:name="cn.com.easytaxi.airport.service.AirportInitListService"
+            android:enabled="true"
+            android:label="etaxicore" />
+        <service
+            android:name="cn.com.easytaxi.service.AlarmClockBookService"
+            android:enabled="true"
+            android:label="etaxicore" />
+
+        <activity
+            android:name="cn.com.easytaxi.airport.AirportBookFragementActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.book.BookHistoryFragementActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.platform.CarryHomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.airport.AirportSelectActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+
+        <receiver android:name="cn.com.easytaxi.receiver.ActionLogUploadReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="cn.com.easytaxi.mine.account.MyAccountActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 银联支付的activity开始 -->
+
+        <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.SplashActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.unionpay.upomp.lthj.android.plugin.init.test" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.IndexActivityGroup"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.unionpay.upomp.lthj.android.plugin.index.test" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.platform.EditLinkActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.HomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.PayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.AccountActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.BankCardInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.SupportCardActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.UserProtocolActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.lthj.plugin.ui.AboutActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 银联支付的activity结束 -->
+
+
+        <!-- 代驾功能开始 -->
+        <activity
+            android:name="cn.com.easytaxi.drivingAgent.PublishDrivingAgentOrderActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.onetaxi.NewMainActivityNew"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 投诉activity -->
+        <activity
+            android:name="cn.com.easytaxi.ui.ComplainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.com.easytaxi.ui.PingJiaActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".wxapi.PayActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx349c8646bb5f1809" />
+            </intent-filter>
+        </activity>
+
+        <!-- 腾讯SSO授权的Activity注册 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105284391" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver android:name="net.sourceforge.simcpux.AppRegister" >
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        <!-- alipay sdk end -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="574f9c5b67e58e1833001fa4" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng" >
+        </meta-data>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name=".GuideActivity"
+            android:label="@string/title_activity_guide" >
+        </activity>
+
+        <!-- 友盟统计  -Start -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5715a0aa67e58e1ed50003b5" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="zidongshengji" />
+        <!-- 友盟统计 -End -->
+
+
+        <!-- 百度地图开发 -Start -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="PAFBrE4Eopxrc5GMFuzfcs2gY3Df3wDu" />
+        <!-- 百度地图开发  -End -->
+
+        <activity
+            android:name="passenger.view.activity.WelcomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="passenger.view.activity.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="passenger.view.activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="passenger.view.activity.SmsLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="passenger.view.activity.StoresMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="passenger.view.activity.UpdatePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="passenger.view.activity.UsedAdressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="passenger.view.activity.ChooseCityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="passenger.view.activity.MineInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="passenger.view.activity.UseGuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="passenger.view.activity.LawProvisionsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="passenger.view.activity.GuideActivity" />
+        <activity
+            android:name="passenger.view.activity.AppraiseDriverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="passenger.view.activity.ConfirmOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="passenger.view.activity.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="passenger.view.activity.OrgHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="passenger.view.activity.StoresListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="passenger.view.activity.ChooseAddrActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="passenger.view.activity.UploadUserDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="passenger.view.activity.CityListForChooseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" >
+        </activity>
+        <activity
+            android:name="passenger.view.activity.MapForChooseAddrActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" >
+        </activity>
+        <activity
+            android:name="passenger.view.activity.OmmmActivity"
+            android:label="@string/title_activity_ommm"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="passenger.view.activity.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="passenger.view.activity.WalletActivity"
+            android:label="@string/title_activity_wallet" >
+        </activity>
+        <activity
+            android:name="passenger.view.activity.RechargeActivity"
+            android:label="@string/title_activity_recharge" >
+        </activity>
+    </application>
+
+</manifest>

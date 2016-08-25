@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/carselectlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+ 	android:padding="5dp"
+    android:background="@color/white" >
+
+    <RadioGroup
+        android:id="@+id/carradiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+      
+
+        <RadioButton
+            android:id="@+id/rb_ss"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:background="@drawable/car_select_ss_bg"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/rb_sw"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/car_select_sw_bg"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/rb_hh"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/car_select_hh_bg"
+            android:button="@null" />
+        
+<!--           <RadioButton -->
+<!--             android:id="@+id/rb_taxi" -->
+<!--             android:layout_width="0dp" -->
+<!--             android:layout_height="match_parent" -->
+            
+<!--             android:layout_weight="1" -->
+<!--             android:background="@drawable/car_select_taxi_bg" -->
+<!--             android:button="@null" /> -->
+        
+    </RadioGroup>
+
+</RelativeLayout>

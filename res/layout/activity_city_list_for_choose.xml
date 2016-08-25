@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout26"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/aiton_basic_color">
+
+        <ImageView
+            android:id="@+id/iv_choose_city_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:src="@drawable/ic_header_back"/>
+
+        <TextView
+            style="@style/title_bar_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="选择地区"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_curr_loc_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout26"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:textColor="@color/light_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前定位城市:"/>
+
+        <TextView
+            android:id="@+id/curr_loction_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/ll_curr_loc_city"
+        android:background="@color/line_color"/>
+
+    <RelativeLayout
+        android:id="@+id/ll_search_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_curr_loc_city"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_everything_search_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/system_gray"
+            android:drawableLeft="@drawable/ico_search"
+            android:hint="输入城市地址 (支持首字母检索)"
+            android:padding="6dp"
+            android:textSize="12sp"/>
+        <ImageView
+            android:id="@+id/iv_search_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search_close"
+            android:layout_centerVertical="true"
+            android:padding="6dp"
+            android:layout_alignRight="@+id/et_everything_search_city"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/ll_search_city"
+        android:background="@color/line_color"/>
+
+    <ListView
+        android:id="@+id/lv_everyting_city_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_line"/>
+
+    <passenger.view.customview.IndexListView
+        android:id="@+id/letter_index_view"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ll_search_city"/>
+
+    <TextView
+        android:id="@+id/tv_letter"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="#E5FF7D27"
+        android:gravity="center"
+        android:text="A"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:textSize="28sp"/>
+
+    <ListView
+        android:id="@+id/lv_everyting_search_city_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:layout_below="@+id/tv_line"/>
+
+</RelativeLayout>

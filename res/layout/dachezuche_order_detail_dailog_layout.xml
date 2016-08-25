@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp">
+
+        <ImageView
+            android:id="@+id/iv_dailog_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/layout_selector_white_system_gray"
+            android:padding="6dp"
+            android:src="@drawable/ic_search_close"/>
+
+        <TextView
+            style="@style/dachezuche_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="@string/please_validation"/>
+
+        <EditText
+            android:id="@+id/et_dachezuche_dialog_unit_of_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zuche_edittext_bg"
+            android:gravity="center"
+            android:hint="@string/unit_of_account"
+            android:textSize="@dimen/normalTextSize"/>
+
+        <EditText
+            android:id="@+id/et_dachezuche_dialog_unit_of_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/zuche_edittext_bg"
+            android:gravity="center"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textSize="@dimen/normalTextSize"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="@string/remember_account_id"/>
+
+            <passenger.view.customview.AnimCheckBox
+                android:id="@+id/ck_remember_account"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                app:circle_color="@color/bule_light"
+                app:stroke_color="@color/deep_gray"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_dachezuche_dialog_comfire"
+            style="@style/dachezuche_btn_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:text="@string/confirm"
+            android:textSize="19dp"/>
+
+        <TextView
+            android:id="@+id/tv_check_failure_reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/validation_failure"
+            android:textColor="@color/red"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_dache_reminder_prog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/linearLayout7"
+        android:layout_alignEnd="@+id/linearLayout7"
+        android:layout_alignLeft="@+id/linearLayout7"
+        android:layout_alignRight="@+id/linearLayout7"
+        android:layout_alignStart="@+id/linearLayout7"
+        android:layout_alignTop="@+id/linearLayout7"
+        android:background="#CCFFFFFF"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:indeterminateDrawable="@drawable/progressbar_animated_rotate"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/validationing"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+</RelativeLayout>

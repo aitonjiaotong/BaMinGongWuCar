@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:clickable="true"
+    android:layout_height="@dimen/top_title_height"
+    android:background="#ff9704" >
+    
+    <!--  android:background="#EEEEEE" -->
+
+    <RelativeLayout
+        android:id="@+id/left_layout"
+        android:layout_width="48dp"
+        android:layout_height="match_parent" >
+
+        <ImageButton
+            android:id="@+id/map_title_leftbtn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/top_back" />
+    </RelativeLayout>
+
+    <TextView
+        android:background="@drawable/logo_dache"
+        android:id="@+id/map_title_mid_tv"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        />
+
+    <RelativeLayout
+        android:id="@+id/right_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true" >
+
+        <Button
+            android:textSize="14dp"
+            android:id="@+id/map_title_right_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingRight="10dp"
+            android:background="@null"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/map_title_right_spinner_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dip"
+        android:background="@drawable/btn001"
+        android:drawableRight="@drawable/city_arrow"
+        android:textColor="@drawable/color_bar_right"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView56"
+        style="@style/dachezuche_sub_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:text="明细费用"/>
+
+    <LinearLayout
+        android:id="@+id/ll_base_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView56"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="车辆费用"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="18dp"
+                android:layout_margin="10dp"
+                android:background="@color/line_gray"/>
+
+            <TextView
+                android:id="@+id/tv_base_rent_explain"
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_base_rent_price"
+                style="@style/dachezuche_yellow_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_pers_driver"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/line_gray"/>
+
+        <LinearLayout
+            android:id="@+id/ll_pers_driver"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="司机费用"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="18dp"
+                android:layout_margin="10dp"
+                android:background="@color/line_gray"/>
+
+            <TextView
+                android:id="@+id/tv_driver_cost_explain"
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_driver_cost_price"
+                style="@style/dachezuche_yellow_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/line_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="超里程费用"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="18dp"
+                android:layout_margin="10dp"
+                android:background="@color/line_gray"/>
+
+            <TextView
+                android:id="@+id/tv_beyond_mileage_explain"
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_beyond_mileage_price"
+                style="@style/dachezuche_yellow_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/line_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="送车上门费"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="18dp"
+                android:layout_margin="10dp"
+                android:background="@color/line_gray"/>
+
+            <TextView
+                android:id="@+id/tv_send_car_to_addr_explain"
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_send_car_to_addr_price"
+                style="@style/dachezuche_yellow_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/line_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="上门取车费"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="18dp"
+                android:layout_margin="10dp"
+                android:background="@color/line_gray"/>
+
+            <TextView
+                android:id="@+id/tv_get_car_to_addr_explain"
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_get_car_to_addr_price"
+                style="@style/dachezuche_yellow_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/line_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_total_title"
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="小计"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="18dp"
+                android:layout_margin="10dp"
+                android:background="@color/line_gray"/>
+
+            <TextView
+                android:id="@+id/tv_total_explain"
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_base_total_price"
+                style="@style/dachezuche_yellow_big_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_gray"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_bg_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/ll_base_price"
+        android:background="@color/system_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_bg_line"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_gray"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="优惠折扣"
+                android:textColor="#fc7070"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="18dp"
+                android:layout_margin="10dp"
+                android:background="@color/line_gray"/>
+
+            <passenger.view.customview.MarqueeTextView
+                android:id="@+id/tv_discount_percentage_explain"
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_discountPercentage_price"
+                style="@style/dachezuche_yellow_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text=""
+                android:textColor="#fc7070"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_gray"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="会员折扣"
+                android:textColor="#fc7070"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="18dp"
+                android:layout_margin="10dp"
+                android:background="@color/line_gray"/>
+
+            <passenger.view.customview.MarqueeTextView
+                android:id="@+id/tv_huiyuanzhekou_msg"
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_huiyuanzhekoujiaqian"
+                style="@style/dachezuche_yellow_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text=""
+                android:textColor="#fc7070"/>
+
+        </LinearLayout>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/system_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="税后总价"
+                android:textColor="@color/title_bar_deep"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="18dp"
+                android:layout_margin="10dp"
+                android:background="@color/line_gray"/>
+
+            <passenger.view.customview.MarqueeTextView
+                android:id="@+id/tv_rate_percentage_explain"
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_rate_percentage_price"
+                style="@style/dachezuche_yellow_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text=""
+                android:textColor="@color/title_bar_deep"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/line_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="手续费用"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="18dp"
+                android:layout_margin="10dp"
+                android:background="@color/line_gray"/>
+
+            <TextView
+                android:id="@+id/tv_poundage_explain"
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_poundage_price"
+                style="@style/dachezuche_yellow_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/line_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="保险费"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="18dp"
+                android:layout_margin="10dp"
+                android:background="@color/line_gray"/>
+
+            <TextView
+                android:id="@+id/tv_base_insurance_explain"
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_base_insurance_price"
+                style="@style/dachezuche_yellow_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_deposit_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/line_gray"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_deposit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="押金截留"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="18dp"
+                android:layout_margin="10dp"
+                android:background="@color/line_gray"/>
+
+            <passenger.view.customview.MarqueeTextView
+                android:id="@+id/tv_deposit_explain"
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_deposit_price"
+                style="@style/dachezuche_yellow_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/line_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="其它费用"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="18dp"
+                android:layout_margin="10dp"
+                android:background="@color/line_gray"/>
+
+            <passenger.view.customview.MarqueeTextView
+                android:id="@+id/tv_ohter_cost_explain"
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_ohter_cost_price"
+                style="@style/dachezuche_yellow_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/line_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="合计"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="18dp"
+                android:layout_margin="10dp"
+                android:background="@color/line_gray"/>
+
+            <TextView
+                style="@style/dachezuche_gray_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_total_price"
+                style="@style/dachezuche_yellow_big_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_gray"/>
+    </LinearLayout>
+
+</RelativeLayout>
